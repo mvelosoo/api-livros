@@ -1,0 +1,75 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "API de Livros",
+      "description": "Documentação da API de Livros"
+    },
+    "host": "localhost:3000",
+    "basePath": "/livros",
+    "schemes": [
+      "http"
+    ],
+    "paths": {
+      "/": {
+        "get": {
+          "summary": "Lista todos os livros",
+          "responses": {
+            "200": {
+              "description": "Uma lista de livros",
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "titulo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "summary": "Adiciona um novo livro",
+          "parameters": [
+            {
+              "name": "livro",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "titulo": {
+                    "type": "string"
+                  }
+                },
+                "required": ["titulo"]
+              }
+            }
+          ],
+          "responses": {
+            "201": {
+              "description": "Livro adicionado com sucesso",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "titulo": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
