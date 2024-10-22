@@ -19,7 +19,7 @@ Instruções para configurar o projeto localmente.
    git clone https://github.com/mvelosoo/api-livros.git
    
 ## Como Usar a API
-A API pode ser acessada por meio de URLs como http://localhost:3000/api/livros. Ferramentas como Postman são recomendadas para testar os endpoints.
+A API pode ser acessada por meio de URLs como http://localhost:3000/api/livros.
 
 Exemplos de Endpoints:
 GET /api/livros: Retorna uma lista de todos os livros.
