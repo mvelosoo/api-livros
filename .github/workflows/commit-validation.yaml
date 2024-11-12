@@ -3,24 +3,23 @@ name: Workflow para Commits
 on:
   push:
     branches:
-      - main  # ou qualquer outra branch que você deseje monitorar
+      - staging
 
 jobs:
   build:
     runs-on: ubuntu-latest
     
     steps:
-      # Clonar o repositório
+
       - name: Checkout do código
         uses: actions/checkout@v3
 
-      # Configurar Node.js
+
       - name: Configurar Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'  # ou qualquer versão que você deseje usar
+          node-version: '16' 
 
-      # Instalar as dependências
       - name: Instalar dependências
         run: npm install
 
