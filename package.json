@@ -1,16 +1,22 @@
 {
   "name": "api-livros",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "API de Livros",
+  "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js",
+    "test": "mocha 'src/test/**/*.js'"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.3",
-    "express": "^4.21.1"
-  }
+    "express": "^4.17.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^10.0.0"
+  },
+  "author": "Maria Eduarda",
+  "license": "ISC"
 }

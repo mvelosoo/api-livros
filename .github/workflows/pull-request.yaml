@@ -1,0 +1,29 @@
+name: Workflow para Pull Requests
+
+on:
+  pull_request:
+    branches:
+      - main  # ou qualquer outra branch que você deseje monitorar
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Clonar o repositório
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      # Configurar Node.js
+      - name: Configurar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # ou qualquer versão que você deseje usar
+
+      # Instalar as dependências
+      - name: Instalar dependências
+        run: npm install
+
+      # Rodar os testes
+      - name: Rodar os testes
+        run: npm test

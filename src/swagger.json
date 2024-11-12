@@ -5,7 +5,7 @@
       "title": "API de Livros",
       "description": "Documentação da API de Livros"
     },
-    "host": "localhost:3000",
+    "host": "localhost:3001",
     "basePath": "/livros",
     "schemes": [
       "http"
