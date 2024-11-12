@@ -1,15 +1,6 @@
-const express = require('express');
-const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('./swagger.json');
-const livrosRouter = require('./livros');
+const app = require('./app'); 
 
-const app = express();
-const PORT = 3000;
-
-app.use(express.json());
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-app.use('/livros', livrosRouter);
-
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
